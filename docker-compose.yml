@@ -11,10 +11,6 @@ services:
       - DB_HOST=${DB_HOST:-localhost}
     command: >
       sh -c "if [ \"$NODE_ENV\" = 'production' ]; then npm run build; npm run start:prod; else npm run start:dev; fi;"
-
-    depends_on:
-      - postgres
-      - db-seed
   postgres:
     image: postgres:9.6
     ports:
@@ -25,13 +21,3 @@ services:
       - POSTGRES_DB=${DB_NAME}
     volumes:
       - './dbdata:/var/lib/postgresql/data'
-
-  db-seed:
-    build: .
-    command: sh -c "npx sequelize-cli db:seed:all || echo 'Seeding already applied'"
-    depends_on:
-      - postgres
-    environment:
-      - DB_HOST=${DB_HOST:-postgres}
-    volumes:
-      - .:/app
