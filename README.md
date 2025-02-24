@@ -10,14 +10,31 @@ https://docs.docker.com/engine/install/ubuntu/
 
 https://docs.docker.com/desktop/setup/install/windows-install/
 
-# Установка
+# Начало работы
+
+## Установка
 
 ```bash
+
 cp .env.example .env
 
+
+npm install
+
+```
+
+## Запуск
+
+```bash
 docker-compose up --build -d
+
 ```
 
 ## Заполнение данных
 
+```bash
 npx sequelize-cli db:seed:all
+
+```
+
+Теперь можно отправлять запросы
