@@ -21,7 +21,7 @@ export class AuthService {
     login: string,
     tabel: string,
     password: string,
-  ): Promise<{ access_token: string }> {
+  ): Promise<{ access_token: string; id: number }> {
     const userDB = await this.usersService.findOneByLogin(login);
 
     if (!userDB) {
@@ -50,6 +50,7 @@ export class AuthService {
 
     return {
       access_token: await this.jwtService.signAsync(payload),
+      id: user.id,
     };
   }
 }
