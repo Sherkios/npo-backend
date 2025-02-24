@@ -1,17 +1,17 @@
-## Docker
+# Docker
 
 Для запуска проекта необходим dokcer и docker-compose
 
-# ubuntu
+## ubuntu
 
 https://docs.docker.com/engine/install/ubuntu/
 
-# windows
+## windows
 
 https://docs.docker.com/desktop/setup/install/windows-install/
 
-## Установка
+# Установка
 
-docker-compose up
+docker-compose up --build
 
 ## Заполнение данных
