@@ -12,6 +12,12 @@ https://docs.docker.com/desktop/setup/install/windows-install/
 
 # Установка
 
-docker-compose up --build
+```bash
+cp .env.example .env
+
+docker-compose up --build -d
+```
 
 ## Заполнение данных
+
+npx sequelize-cli db:seed:all
