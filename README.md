@@ -10,6 +10,10 @@ https://docs.docker.com/engine/install/ubuntu/
 
 https://docs.docker.com/desktop/setup/install/windows-install/
 
+## docker-compose
+
+https://docs.docker.com/compose/install/
+
 # Начало работы
 
 ## Установка
