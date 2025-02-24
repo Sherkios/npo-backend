@@ -50,6 +50,34 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
+      {
+        login: 'test3',
+        tabel: '003',
+        password: bcrypt.hashSync('password3', 10),
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        login: 'test4',
+        tabel: '004',
+        password: bcrypt.hashSync('password4', 10),
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        login: 'test5',
+        tabel: '005',
+        password: bcrypt.hashSync('password5', 10),
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        login: 'test6',
+        tabel: '006',
+        password: bcrypt.hashSync('password6', 10),
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
     ]);
   },
 
